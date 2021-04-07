@@ -118,4 +118,5 @@ public class TruckTest {
     this.truck.emptyCargo();
     Assertions.assertEquals(0, this.truck.getCurrentLoadCubicFeet());
   }
+
 }
