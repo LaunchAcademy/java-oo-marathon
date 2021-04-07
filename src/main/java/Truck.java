@@ -53,4 +53,9 @@ public class Truck extends Automobile {
     public void emptyCargo() {
         this.currentLoadCubicFeet = 0;
     }
+
+    @Override
+    public String companyGreeting() {
+        return "Thank you for shipping with gÜber.";
+    }
 }

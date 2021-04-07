@@ -1,4 +1,4 @@
-public class Automobile {
+public abstract class Automobile {
     private String type;
     private String model;
     private String make;
@@ -60,4 +60,6 @@ public class Automobile {
     public void repair(){
         this.inService = true;
     }
+
+    public abstract String companyGreeting();
 }

@@ -37,6 +37,10 @@ public class Car extends Automobile {
         return this.numPassengers;
     }
 
+    @Override
+    public String companyGreeting() {
+        return "Thank you for riding with gÜber, we hope you enjoy your ride!";
+    }
 }
 
 
