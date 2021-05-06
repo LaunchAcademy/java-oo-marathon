@@ -12,6 +12,12 @@ public class CarTest {
   }
 
   @Test
+  @DisplayName("Car inherits from the Automobile class")
+  public void init_car_inherits_automobile() {
+    Assertions.assertTrue(this.car instanceof Automobile);
+  }
+
+  @Test
   @DisplayName("Car inherits Automobile: When initialized a car has a type")
   public void init_car_hasType(){
     Assertions.assertEquals("hatchback", this.car.getType());
