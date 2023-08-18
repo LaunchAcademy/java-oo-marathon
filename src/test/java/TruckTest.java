@@ -20,31 +20,31 @@ public class TruckTest {
   }
 
   @Test
-  @DisplayName("Truck inherits Car: When initialized a Truck has a type")
+  @DisplayName("Truck inherits Automobile: When initialized a Truck has a type")
   public void init_truck_hasType(){
     Assertions.assertEquals("pickup", this.truck.getType());
   }
 
   @Test
-  @DisplayName("Truck inherits Car: When initialized a Truck has a model")
+  @DisplayName("Truck inherits Automobile: When initialized a Truck has a model")
   public void init_truck_hasModel(){
     Assertions.assertEquals("Tundra", this.truck.getModel());
   }
 
   @Test
-  @DisplayName("Truck inherits Car: When initialized a Truck has a make")
+  @DisplayName("Truck inherits Automobile: When initialized a Truck has a make")
   public void init_truck_hasMake(){
     Assertions.assertEquals("Toyota", this.truck.getMake());
   }
 
   @Test
-  @DisplayName("Truck inherits Car: When initialized a Truck has a mpg")
+  @DisplayName("Truck inherits Automobile: When initialized a Truck has a mpg")
   public void init_truck_hasMpg(){
     Assertions.assertEquals(31, this.truck.getMpg());
   }
 
   @Test
-  @DisplayName("Truck inherits Car: When initialized a Truck has a fuelCapacity")
+  @DisplayName("Truck inherits Automobile: When initialized a Truck has a fuelCapacity")
   public void init_truck_hasFuelCapacity(){
     Assertions.assertEquals(11, this.truck.getFuelCapacity());
   }
@@ -100,14 +100,14 @@ public class TruckTest {
   @Test
   @DisplayName("Truck#addCargo method to add to currentLoadCubicFeet")
   public void addCargo_to_currentLoadCubicFeet_method(){
-    this.truck.addCargo(72);
+    Assertions.assertTrue(this.truck.addCargo(72));
     Assertions.assertEquals(72, this.truck.getCurrentLoadCubicFeet());
   }
 
   @Test
   @DisplayName("Truck#addCargo does not change currentLoadCubicFeet if added to over capacity")
   public void addCargo_no_change_currentLoadCubicFeet_method_over_capacity (){
-    this.truck.addCargo(150);
+    Assertions.assertFalse(truck.addCargo(150));
     Assertions.assertEquals(0, this.truck.getCurrentLoadCubicFeet());
   }
 

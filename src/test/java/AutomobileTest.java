@@ -53,4 +53,12 @@ public class AutomobileTest {
     this.automobile.toggleEngine();
     Assertions.assertEquals(false, this.automobile.isRunning());
   }
+
+  @Test
+  @DisplayName("When toggleEngine is run an Automobile starts running")
+  public void toggleEngine_startsRunning(){
+    this.automobile.toggleEngine(); // false
+    this.automobile.toggleEngine(); // true
+    Assertions.assertEquals(true, this.automobile.isRunning());
+  }
 }
